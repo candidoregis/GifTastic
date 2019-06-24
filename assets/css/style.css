@@ -1,0 +1,32 @@
+ body, html {
+    margin: 0;
+    padding: 0;
+}
+
+.animals {
+    flex: 1 1 auto;
+    margin: 5px;
+    padding: 10px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.7s;
+    background-size: 200% auto;
+    color: white;
+    text-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+    box-shadow: 0 0 20px #eee;
+    border-radius: 10px;
+    background-image: linear-gradient(to right, #84fab0 0%, #39b6f5 51%, #84fab0 100%);
+}
+
+.animals:hover {
+    background-position: right center;
+} 
+
+.custom-main{
+    border: 1px solid black;
+}
+
+.custom-aside{
+    border: 1px solid green;
+    text-align: center;
+}
