@@ -13,61 +13,32 @@
 
 <body>
 
+    <div id="buttons-view"></div>
+
     <div class="container">
 
-        <div id="buttons-view"></div>
+        <div class="row">
+            <div class="col-10 custom-main">
+                <div id="animals-view"></div>
+            </div>
+            <div class="col-2 custom-aside">
+                <form id="animal-form">
+                    <div class="row">
+                        <label for="animal-input">Choose an animal and type it here:</label>
+                    </div>
+                    <div class="row">
+                        <input type="text" id="animal-input">
+                    </div>
+                    <div class="row">
+                        <input id="add-animal" type="submit" value="ADD">
+                    </div>
+                </form>
+            </div>
+        </div>
 
-        <form id="animal-form">
-            <label for="animal-input">Add an animal!</label>
-            <input type="text" id="animal-input"><br>
-            <input id="add-animal" type="submit" value="Add an animal!">
-        </form>
-
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-        <script type="text/javascript">
-
-            var animals = ["dog", "cat", "whale", "hawk"];
-
-            function renderButtons() {
-
-                $("#buttons-view").empty();
-
-                for (var i = 0; i < animals.length; i++) {
-                    var a = $("<button>");
-                    a.addClass("animals");
-                    a.attr("data-name", animals[i]);
-                    a.text(animals[i]);
-                    $("#buttons-view").append(a);
-                }
-            }
-
-            $("#add-animal").on("click", function (event) {
-                event.preventDefault();
-                var animal = $("#animal-input").val().trim();
-                animals.push(animal);
-                $("#animal-input").val("");
-                renderButtons();
-            });
-
-            renderButtons();
-        </script>
     </div>
 
-
-
-
-
-
-
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script src="../GifTastic/assets/javascript/game.js"></script>
 
 </body>

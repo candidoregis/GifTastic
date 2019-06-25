@@ -3,7 +3,7 @@
     padding: 0;
 }
 
-.animals {
+.animals-btn {
     flex: 1 1 auto;
     margin: 5px;
     padding: 10px;
@@ -18,15 +18,21 @@
     background-image: linear-gradient(to right, #84fab0 0%, #39b6f5 51%, #84fab0 100%);
 }
 
-.animals:hover {
+.animals-btn:hover {
     background-position: right center;
 } 
 
 .custom-main{
     border: 1px solid black;
+    z-index: -444;
 }
 
 .custom-aside{
     border: 1px solid green;
     text-align: center;
+}
+
+.gif {
+    padding: 5px;
+    z-index: 999;
 }
