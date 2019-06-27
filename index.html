@@ -6,40 +6,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title></title>
     <link rel="stylesheet" type="text/css" href="../GifTastic/assets/css/reset.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="../GifTastic/assets/css/style.css">
 </head>
 
 <body>
-
-    <div id="buttons-view"></div>
-
     <div class="container">
-
-        <div class="row">
-            <div class="col-10 custom-main">
-                <div id="animals-view"></div>
-            </div>
-            <div class="col-2 custom-aside">
-                <form id="animal-form">
-                    <div class="row">
-                        <label for="animal-input">Choose an animal and type it here:</label>
-                    </div>
-                    <div class="row">
-                        <input type="text" id="animal-input">
-                    </div>
-                    <div class="row">
-                        <input id="add-animal" type="submit" value="ADD">
-                    </div>
-                </form>
-            </div>
+        <div class="header">
+            <div id="buttons-view"></div>
         </div>
-
+        <div class="aside">
+            <form id="animal-form">
+                <input type="text" id="animal-input">
+                <input id="add-animal" type="submit" value="ADD">
+            </form>
+        </div>
+        <div class="content">
+            <div id="animals-view">TESTE</div>
+        </div>
     </div>
-
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
     <script src="../GifTastic/assets/javascript/game.js"></script>
 
 </body>

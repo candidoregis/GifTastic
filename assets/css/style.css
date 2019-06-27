@@ -1,6 +1,43 @@
- body, html {
-    margin: 0;
-    padding: 0;
+/* --------- BASIC CSS FOR GRID --------- */
+
+  html, body {
+    box-sizing: border-box;
+    background-color: black;
+    height: 100%;
+    padding: 10px;
+    margin: 0px;
+  }
+
+ .container > div {
+    display: flex;
+    padding: 10px;
+    color: #ffeead;
+  }
+  
+  /* --------- MY CSS FOR GRID --------- */
+ 
+.container {
+    height: 100%;
+    display: grid;
+    grid-gap: 5px;
+    grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+    grid-template-rows: 1fr auto;
+    grid-template-areas: 
+        "b b b b b b b b b a a a"
+        "c c c c c c c c c c c c";
+}
+
+.header {
+    grid-area: b;
+}
+
+.content {
+    grid-area: c;
+    grid-auto-flow: dense;
+}
+
+.aside {
+    grid-area: a;
 }
 
 .animals-btn {
@@ -22,17 +59,6 @@
     background-position: right center;
 } 
 
-.custom-main{
-    border: 1px solid black;
-    z-index: -444;
-}
-
-.custom-aside{
-    border: 1px solid green;
-    text-align: center;
-}
-
 .gif {
-    padding: 5px;
-    z-index: 999;
+    padding: 20px;
 }
