@@ -28,31 +28,27 @@ $(document).ready(function () {
 
         var xhr = $.get(queryURL);
         xhr.done(function (data) {
-            console.log(data.data);
+            // console.log(data.data);
             for (var i = 0; i < 10; i++) {
                 var imageUrlAnimate = data.data[i].images.fixed_width.url;
                 var imageUrlStill = data.data[i].images.fixed_width_still.url;
-                // var btnWrapper = $("<button>");
-
+                var imageRating = data.data[i].rating;
                 var animalImage = $("<img>");
                 animalImage.attr("src", imageUrlStill);
                 animalImage.attr("data-still", imageUrlStill);
                 animalImage.attr("data-animate", imageUrlAnimate);
                 animalImage.attr("data-state", "still");
                 animalImage.addClass("gif");
-                // btnWrapper.append(animalImage);
+                var animalP = $("<p>");
+                animalP.text = imageRating;
+                animalImage.append(animalP);
                 $("#animals-view").prepend(animalImage);
-                // console.log(animalImage)
             }
         });
     };
 
-    
-    // $(".gif").on("click", function () {
     function switchState() {
-        console.log("entrei");
         var state = $(this).attr("data-state");
-        console.log(state);
         if (state === "still") {
             $(this).attr("src", $(this).attr("data-animate"));
             $(this).attr("data-state", "animate");
@@ -63,21 +59,9 @@ $(document).ready(function () {
     }
 
     $(document).on("click", ".animals-btn", displayAnimalsGif);
-    $(".gif").each(function(event){
-        event.stopPropagation();
-        $
-    });
-    $(document).on("click", ".gif", switchState);  
+
+    $(document).on("click", ".gif", switchState);
 
     renderButtons();
-    // jQuery.get({
-    //     url: "https://api.giphy.com/v1/gifs/search?q=cat+funny&api_key=dc6zaTOxFJmzC&rating=pg",
-    //     success: function (result) {
-    //         console.log(result)
-    //     },
-    //     error: function (error) {
-    //         console.log(error);
-    //     }
-    // });
 
 });
