@@ -1,21 +1,23 @@
-/* --------- BASIC CSS FOR GRID --------- */
+/* --------- IMPORTING NEW FONT --------- */
 
-  html, body {
+@import url('https://fonts.googleapis.com/css?family=Prompt&display=swap');
+
+/* --------- BASIC CSS FOR GRID --------- */
+html, body {
     box-sizing: border-box;
     background-color: black;
     height: 100%;
     padding: 10px;
     margin: 0px;
-  }
+}
 
- .container > div {
+.container > div {
     display: flex;
     padding: 10px;
-  }
-  
-  /* --------- MY CSS FOR GRID --------- */
- 
-.container {
+}
+
+/* --------- START OF MY CSS FOR GRID --------- */ 
+ .container {
     height: 100%;
     display: grid;
     grid-gap: 5px;
@@ -39,7 +41,9 @@
     grid-area: a;
 }
 
-#add-animal,
+/* --------- CSS FOR BUTTONS --------- */
+#add-topic,
+#add-more,
 button {
     flex: 1 1 auto;
     margin: 5px;
@@ -55,10 +59,31 @@ button {
     background-image: linear-gradient(to right, #84fab0 0%, #39b6f5 51%, #84fab0 100%);
 }
 
-.animals-btn:hover {
+#add-more:disabled,
+#add-more[disabled]{
+    border: 1px solid #999999;
+    opacity: 0.5; 
+    color: #666666;
+}
+
+.topics-btn:hover {
     background-position: right center;
 } 
 
-.gif {
+/* --------- CSS FOR CARD/IMAGE/RATING --------- */
+.card{
+    display: inline-block;
+    text-align: center;
     padding: 20px;
+    font-family: 'Prompt', cursive;
+    color: white;
+    transition: 0.3s;
+}
+
+img {
+  border-radius: 5px;
+}
+  
+.cardContainer {
+    padding: 2px 16px;
 }
