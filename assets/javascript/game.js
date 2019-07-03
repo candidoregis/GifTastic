@@ -38,14 +38,14 @@ $(document).ready(function () {
         var offset = 0;
         offsetMore = offset;
         currentSelection = name;
-        var queryURL = "http://api.giphy.com/v1/gifs/search?q=" + name + "&limit=10&offset=" + offset + "&api_key=k18J8WsAogUXHfMrNROAFGP7ZnL3OL5x";
+        var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + name + "&limit=10&offset=" + offset + "&api_key=k18J8WsAogUXHfMrNROAFGP7ZnL3OL5x";
         displayTopicsGif(queryURL);
     }
 
     // FUNCTION THAT CREATES THE SECOND AND ON QUERY FROM SAME TOPIC
     function displayTopicsQueryMore() {
         offsetMore += 10;
-        var queryURL = "http://api.giphy.com/v1/gifs/search?q=" + currentSelection + "&limit=10&offset=" + offsetMore + "&api_key=k18J8WsAogUXHfMrNROAFGP7ZnL3OL5x";
+        var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + currentSelection + "&limit=10&offset=" + offsetMore + "&api_key=k18J8WsAogUXHfMrNROAFGP7ZnL3OL5x";
         displayTopicsGif(queryURL);
     }
 
