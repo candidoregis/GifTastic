@@ -24,11 +24,11 @@ $(document).ready(function () {
     function displayAnimalsGif() {
 
         var name = $(this).attr("data-name");
-        var queryURL = "http://api.giphy.com/v1/gifs/search?q=" + name + "&api_key=k18J8WsAogUXHfMrNROAFGP7ZnL3OL5x";
+        var queryURL = "http://api.giphy.com/v1/gifs/search?q=" + name + "&limit=10&api_key=k18J8WsAogUXHfMrNROAFGP7ZnL3OL5x";
 
         var xhr = $.get(queryURL);
         xhr.done(function (data) {
-            // console.log(data.data);
+            console.log(data.data);
             for (var i = 0; i < 10; i++) {
                 var imageUrlAnimate = data.data[i].images.fixed_width.url;
                 var imageUrlStill = data.data[i].images.fixed_width_still.url;
